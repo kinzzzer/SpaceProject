@@ -6,17 +6,13 @@ import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 
 
-
-
-
-
-export default function MediaCard({name, windowEnd, windowStart, image, key, list, setFavorite, handelAddFavorite}){
+export default function MediaCard(props){
+    const {name, windowEnd, windowStart, image, key, handelAddFavorite} = props
     return (
         <Card sx={{ maxWidth: 500,
             boxShadow: 3,
             borderRadius: 2,
             m: 2,
-
         }}>
             <CardMedia
                 component="img"
@@ -36,7 +32,6 @@ export default function MediaCard({name, windowEnd, windowStart, image, key, lis
             </CardContent>
             <CardActions>
                 <button onClick={() =>  handelAddFavorite(key) }>Add in favorite </button>
-
             </CardActions>
         </Card>
     );
