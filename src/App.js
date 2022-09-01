@@ -5,8 +5,8 @@ import ServerPosts from "./components/ServerPosts";
 
 function App() {
   return (
+
     <div className="App">
-        <h1>Space</h1>
         <ServerPosts />
     </div>
   );

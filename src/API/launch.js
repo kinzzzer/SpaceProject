@@ -1,9 +1,12 @@
 import axios from "axios";
 
 
-export default async function getLaunchList(pagination) {
-    const query = queryString.stringify(pagination)
-    return  await axios
-        .get(`https://lldev.thespacedevs.com/2.2.0/launch?${query}`)
-        .then((res) => res.data.results)
+export default async function getLaunchList(link) {
+    if (link) {
+        return await axios
+            .get(link)
+            .then((res, error) => {
+                return res.data
+            })
+    }
 }
