@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
-import rocketReducer from './slices/rocketSlice'
+import cardsReducer from './slice/cardSlice'
 
 export const store = configureStore({
     reducer: {
-        rockets: rocketReducer
+        cards: cardsReducer
     },
 })
+// state все карточки 
+// curent и конрктено вібранная карта 
